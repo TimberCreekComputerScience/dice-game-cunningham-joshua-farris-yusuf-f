@@ -1,0 +1,26 @@
+import java.util.Scanner;  
+public class dice {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int die1 = 0;
+	    int die2 = 0;
+		System.out.println("Would you like to roll the dice? (0 = no, 1 = yes)");
+		 int userInput = scan.nextInt();  
+		 if (userInput == 1) {
+			 die1 = (int)(Math.random()*6)+1;
+			 die2 = (int)(Math.random()*6)+1;
+			 if (die1 + die2 == 7){
+				 System.out.println("You rolled a "+ (die1 + die2)+", you win!");
+			 } else if (die1 + die2 == 11){
+				 System.out.println("You rolled an "+ (die1 + die2) +", you win!");
+			 } else {
+				 System.out.println("You rolled "+ (die1 + die2) +", you lose!");
+			 }
+		 } else if (userInput == 0) {
+			 System.out.println("If you say so.");
+		 } else {
+			 System.out.println("That doesn't answer the question.");
+		 }
+	}
+}
